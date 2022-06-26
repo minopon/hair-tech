@@ -1,5 +1,9 @@
 # WordPress を Heroku にデプロイする手順（Windows版）
 
+完成サイト例
+
+https://dry-shore-62911.herokuapp.com/
+
 ## Windows版 Git インストール
 
 https://gitforwindows.org/
@@ -73,20 +77,22 @@ http://localhost/wordpress/
 
 ## 残りのWP美容室5.4章以降の作業をHerokuサイト側で行うための作業
 
-WordPressの設定 > 一般の「WordPress アドレス (URL)」と「サイトアドレス (URL)」の両方のURLを以下に変更する。
-
-設定保存後はローカル環境ではログインできなくなる。（再度逆に設定を行えばローカル環境で再びログインできる）
+WordPressの設定 > 一般の「WordPress アドレス (URL)」と「サイトアドレス (URL)」の両方のURLをHerokuのURLに変更する。
 ```
 http://localhost/wordpress
-↓
+↓変更例
 https://dry-shore-62911.herokuapp.com
 ```
+※設定保存後はローカル環境ではログインできなくなる。（再度逆に設定を行えばローカル環境で再びログインできる）
+
 HerokuのURLをhttpsにするため、wordpress/wp-config.php を開き96行目あたり（ABSPATHの上）に以下を追加する
 ```
 $_SERVER['HTTPS'] = 'on'; 
 ```
 
 ## wordpress ディレクトリ直下に github 用の README.md を作る
+
+Heroku側でもURL直打ちで参照できるので記載内容は注意
 
 ## Heroku にデプロイ
 
