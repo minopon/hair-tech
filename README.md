@@ -23,11 +23,6 @@ XAMPPコントロールパネル「Config」ボタンをクリックして php.i
 max_execution_time=0
 ```
 
-・以下を検索し、先頭の ; を削除する
-```
-extension=gd
-```
-
 その後、XAMPPコントロールパネルで「Apache」のみ起動させておく。
 
 ## HerokuアプリとDB作成
